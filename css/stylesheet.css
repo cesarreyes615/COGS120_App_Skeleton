@@ -1,0 +1,152 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+	div.income{
+	position: absolute;
+	left: 35%;
+	top: 10%;
+}
+
+.income p{
+	font-size: 5em;
+	text-align: center;
+}
+
+div.trips{
+	position: absolute;
+	left: 28%;
+	top: 20%;
+}
+
+.trips p{
+	font-size: 3em;
+	padding-bottom: 20px;
+}
+
+
+.myProgress{
+	width: 100%;
+	background-color: grey;
+}
+
+.myBar1{
+	width: 70%;
+	height: 30px;
+	background-color: black;
+}
+
+.myBar2{
+	width: 25%;
+	height: 30px;
+	background-color: black;
+}
+
+.myBar3{
+	width: 20%;
+	height: 30px;
+	background-color: black;
+}
+
+.space{
+	padding-bottom: 100px;
+}
+
+div.reminders{
+	position: absolute;
+	left: 27%;
+	top: 50%;
+}
+
+.reminders p{
+	font-size: 4em;
+}
+
+
+div.payments{
+	position: absolute;
+	left: 32%;
+	top: 55%;
+}
+
+.payments p{
+	font-size: 3em;
+}
+
+#new-purchase{
+	position: absolute;
+	left: 30%;
+	top: 60%;
+	font-size: 4em;
+}
+
+.buttons{
+	position: absolute;
+	bottom: 0;
+}
+.buttons button{
+	font-size: 4em;
+}
+
+#back{
+	width: 5em;
+}
+#home{
+	width: 5em;
+}
+#settings{
+	width:5.1em;
+}
+
+button.accordion{
+	font-size: 3em;
+  border:none;
+  outline:none;
+  text-align:left;
+  background-color:transparent;
+  padding:8px;
+  margin:4px 0;
+  border-radius:4px;
+  transition:0.3s;
+}
+
+button.accordion.active{
+  border-radius:4px 4px 0 0;
+  margin:4px 0 0;
+ }
+
+div.panel{
+	font-size: 2em;
+  border-radius:0 0 4px 4px;
+  overflow:hidden;
+  opacity:0;
+  max-height:0;
+  transition:0.3s;
+  padding:0 8px;
+  margin:0;
+}
+
+div.panel.show{
+  opacity:1;
+  max-height:500px;
+  padding:8px;
+  margin:2px 0 4px;
+}
+
+h1{
+	position: absolute;
+	left: 35%;
+	top: 10%;
+}
+#add-goal{
+	position: absolute;
+	left: 37%;
+	top: 70%;
+	font-size: 4em;
+}
+
+
+	
