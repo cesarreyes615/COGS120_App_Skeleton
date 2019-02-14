@@ -148,5 +148,33 @@ h1{
 	font-size: 4em;
 }
 
+.login{
+	position: absolute;
+	left: 40%;
+	top: 39%;
+	font-size: 2em;
+	min-height: 200px;
+}
+
+p.login{
+	position: absolute;
+	left: 40%;
+	top: 35%;
+}
+
+.sign-up{
+	position: absolute;
+	left: 40%;
+	top: 39%;
+	font-size: 2em;
+	min-height: 200px;
+}
+
+p.sign-up{
+	position: absolute;
+	left: 40%;
+	top: 35%;
+}
+
 
 	
