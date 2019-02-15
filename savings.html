@@ -3,6 +3,8 @@
 <html>
 	<head>
 		<link href = "css/stylesheet.css" rel = "stylesheet"/>
+		<script src = "handlebars-v4.1.0.js"></script>
+		<link href = "css/popup_stylesheet.css" rel = "stylesheet"/>
 	</head>
 
 	<body>
@@ -12,6 +14,7 @@
 			<a href = "savings.html"><p>Savings</p></a>
 			<a href = "payment_history.html"><p>Payment History</p></a>
 			<a href = "payment_reminders.html"><p>Payment Reminders</p></a>
+			<a href = "login.html"><p>Logout</p></a>
 		</div>
 		<h1 id = "save">Savings Goals</h1>
 		<div class = "trips">
@@ -29,13 +32,55 @@
 			<div class = "myProgress">
 				<div class = "myBar3"></div>
 			</div>
+
+			<div id = "savings"></div>
+			<script id = "savings-template" type = "text/x-handlebars-template">
+				<ol>
+				{{#each savings}}
+				<li>{{goal}} {{current}}/{{total}}
+				{{/each}}
+				</ol>
+			</script>
+			<script type = "text/javascript">
+				var savingsStuff = document.getElementById("savings-template").innerHTML;
+
+				var template = Handlebars.compile(savingsStuff);
+
+				var savingsData = template({
+				savings: [
+				{goal: "New Car", current: "$3000", total: "$5000"},
+				{goal: "Concert", current: "$50", total: "$200"},
+				{goal: "Custom Computer", current: "$400", total: "$1200"},
+				{goal: "Air Pods", current: "$20", total: "$160"}
+				]
+			});
+				document.getElementById("savings").innerHTML += savingsData;
+			</script>
 		</div>
-		<button type = "button" id = "add-goal"> Add Goal</button>
+		<button type = "button" id = "add-goal" class="open-button" onclick="openForm()"> Add Goal</button>
+
+		<div class="form-popup" id="myForm">
+		  <form  class="form-container">
+
+		    <label for="new_goal"><b>Name of New Goal</b></label>
+		    <input type="text" placeholder="Enter New Goal" name="new_goal" required>
+
+		    <label for="cost"><b>Cost</b></label>
+		    <input type="text" placeholder="Enter Cost" name="cost" required>
+
+		    <label for="deadline"><b>deadline</b></label>
+		    <input type="text" placeholder="Enter Deadline" name="deadline" required>
+
+		    <button type="submit" class="btn">Add Goal</button>
+		    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		  </form>
+		</div>
 		<div class = "buttons">
 			<button type = "button" id = "back">Back</button>
 			<a href = "home.html"><button type = "button" id = "home">Home</button></a>
 			<button type = "button" id = "settings">Settings</button>
 		</div>
 		<script src = "js/menu.js"></script>
+		<script src = "js/popup.js"></script>
 	</body>
 </html>

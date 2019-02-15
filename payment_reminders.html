@@ -2,10 +2,65 @@
 
 <html>
 	<head>
+		<link href = "css/stylesheet.css" rel = "stylesheet"/>
+		<link href = "css/popup_stylesheet.css" rel = "stylesheet"/>
 	</head>
 
 	<body>
-		Under construction.
-		<a href = "home.html">Home</a>
+		<button type = "button" class = "accordion">Menu</button>
+		<div class = "panel">
+			<a href = "expenditures.html"><p>Update Expenditures</p></a>
+			<a href = "savings.html"><p>Savings</p></a>
+			<a href = "payment_history.html"><p>Payment History</p></a>
+			<a href = "payment_reminders.html"><p>Payment Reminders</p></a>
+			<a href = "login.html"><p>Logout</p></a>
+		</div>
+		<div class = "space"></div>
+		<div class = "payment_reminder">
+			<h2>Payment Reminders</h2>
+		</div>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Due</th>
+			</tr>
+			<tr>
+				<th>Electricity</th>
+				<th>2/11</th>
+			</tr>
+			<tr>
+				<th>Internet</th>
+				<th>2/13</th>
+			</tr>
+			<tr>
+				<th>Rent</th>
+				<th>3/1</th>
+			</tr>
+		</table>
+		<button type = "button" id = "new_reminder" class="open-button" onclick="openForm()"> New Reminder</button>
+
+		<div class="form-popup" id="myForm">
+		  <form  class="form-container">
+
+		    <label for="new_purchase"><b>New Purchase</b></label>
+		    <input type="text" placeholder="Enter a New Reminder" name="new_reminder" required>
+
+		    <label for="due_date"><b>Due Date</b></label>
+		    <input type="text" placeholder="Enter Due Date" name="due_date" required>
+
+		    <button type="submit" class="btn">Add Reminder</button>
+		    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		  </form>
+		</div>
+
+		<div class = "buttons">
+			<button type = "button" id = "back">Back</button>
+			<a href = "home.html"><button type = "button" id = "home">Home</button></a>
+			<button type = "button" id = "settings">Settings</button>
+		</div>
+		<script src = "js/menu.js"></script>
+		<script src = "js/popup.js"></script>
+
+		
 	</body>
 </html>

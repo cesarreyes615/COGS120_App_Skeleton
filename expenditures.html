@@ -2,10 +2,47 @@
 
 <html>
 	<head>
+		<link href = "css/stylesheet.css" rel = "stylesheet"/>
+		<link href = "css/popup_stylesheet.css" rel = "stylesheet"/>
 	</head>
 
 	<body>
-		Under construction.
-		<a href = "home.html">Home</a>
+		<button type = "button" class = "accordion">Menu</button>
+		<div class = "panel">
+			<a href = "expenditures.html"><p>Update Expenditures</p></a>
+			<a href = "savings.html"><p>Savings</p></a>
+			<a href = "payment_history.html"><p>Payment History</p></a>
+			<a href = "payment_reminders.html"><p>Payment Reminders</p></a>
+			<a href = "login.html"><p>Logout</p></a>
+		</div>
+
+		<div class = "update_expenditures">
+			<p>Update Expenditures</p>
+		</div>
+
+		<button type = "buttons" id = "add_expenditure" class="open-button" onclick="openForm()">Add Expenditure</button>
+
+		<div class="form-popup" id="myForm">
+		  <form  class="form-container">
+
+		    <label for="expenditure_name"><b>Name of New Goal</b></label>
+		    <input type="text" placeholder="Enter Expenditure" name="expenditure_name" required>
+
+		    <label for="cost"><b>Cost</b></label>
+		    <input type="text" placeholder="Enter Cost" name="cost" required>
+
+		    <button type="submit" class="btn">Add Expenditure</button>
+		    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		  </form>
+		</div>
+
+		<div class = "buttons">
+			<button type = "buttons" id = "back">Back</button>
+			<a href = "home.html"><button type = "buttons" id = "home">Home</button></a>
+			<button type = "buttons" id = "settings">Settings</button>
+		</div>
+		<script src = "js/menu.js"></script>
+		<script src = "js/popup.js"></script>
+
 	</body>
 </html>

@@ -147,34 +147,113 @@ h1{
 	top: 70%;
 	font-size: 4em;
 }
-
-.login{
+#new_reminder{
 	position: absolute;
-	left: 40%;
-	top: 39%;
-	font-size: 2em;
-	min-height: 200px;
+	left: 25%;
+	top: 70%;
+	font-size: 4em;
 }
 
-p.login{
+div .payment_history{
 	position: absolute;
-	left: 40%;
-	top: 35%;
+	left: 35%;
+	top: 10%;
+}
+
+.payment_history{
+	font-size: 3em;
+	text-align: center;
+}
+
+div .payment_list{
+	position: absolute;
+
+}
+
+.payment_list{
+	font-size: 3em;
+	margin: 10%;
+	padding: 20px;
+	left: 35%;
+	top: 20%
+
+}
+
+div .payment_reminder{
+	position: absolute;
+	left: 35%;
+	top: 10%;
+}
+
+.payment_reminder{
+	font-size: 3em;
+	text-align: center;
+}
+
+table, td, th {
+  border: 1px solid black;
+  font-size: 1.5em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10%;
+}
+
+th {
+  height: 50px;
+}
+
+.login{
+	font-size: 3em;
+	position: absolute;
+	top: 40%;
+	left: 28%;
+	width: 30%;
+	border: 3em;
+}
+p.login{
+	top:35%;
+	left:28%;
+}
+
+input[type="email"] {
+  font-size: 1em;
+}
+input[type="password"] {
+  font-size: 1em;
+}
+input[type="submit"] {
+  font-size: 1em;
 }
 
 .sign-up{
+	font-size: 3em;
 	position: absolute;
-	left: 40%;
-	top: 39%;
-	font-size: 2em;
-	min-height: 200px;
+	top: 40%;
+	left: 28%;
+	width: 30%;
+	border: 3em;
 }
-
 p.sign-up{
-	position: absolute;
-	left: 40%;
-	top: 35%;
+	top:35%;
+	left:28%;
+}
+
+#savings{
+	position: relative;
+	font-size: 3em;
+	left: 17%;
+}
+
+.login a{
+	font-size: : 1em;
+	color: black;
 }
 
 
-	
+.sign-up a{
+	font-size: 1em;
+	color: black;
+}

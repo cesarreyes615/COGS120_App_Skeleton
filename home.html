@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<link href = "css/stylesheet.css" rel = "stylesheet"/>
+		<link href = "css/popup_stylesheet.css" rel = "stylesheet"/>
 	</head>
 
 	<body>
@@ -12,6 +13,7 @@
 			<a href = "savings.html"><p>Savings</p></a>
 			<a href = "payment_history.html"><p>Payment History</p></a>
 			<a href = "payment_reminders.html"><p>Payment Reminders</p></a>
+			<a href = "login.html"><p>Logout</p></a>
 		</div>
 		<div class = "income">
 			<h2>Your disposable income is</h2>
@@ -36,7 +38,21 @@
 		<div class = "payments">
 			<p>Electricity Bill 2/11</p>
 		</div>
-		<button type = "button" id = "new-purchase">New Purchase</button>
+		<button type = "button" id = "new-purchase" class="open-button" onclick="openForm()">New Purchase</button>
+
+		<div class="form-popup" id="myForm">
+		  <form  class="form-container">
+
+		    <label for="new_purchase"><b>New Purchase</b></label>
+		    <input type="text" placeholder="Enter your new purchase" name="new_purchase" required>
+
+		    <label for="cost"><b>Cost</b></label>
+		    <input type="text" placeholder="Enter Cost" name="cost" required>
+
+		    <button type="submit" class="btn">Add New Purchase</button>
+		    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		  </form>
+		</div>
 
 		<div class = "buttons">
 			<button type = "button" id = "back">Back</button>
@@ -44,5 +60,6 @@
 			<button type = "button" id = "settings">Settings</button>
 		</div>
 		<script src = "js/menu.js"></script>
+		<script src = "js/popup.js"></script>
 	</body>
 </html>
